@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import Loader from "../ui/components/loader/loader";
 
-const Register = lazy(() => import("./register/register"))
+const Register = lazy(() => import("./register/register"));
+const Login = lazy(()=> import("./login/login"));
 
 const Pages = () => {
     return (
@@ -14,6 +15,7 @@ const Pages = () => {
             <Suspense fallback={<Loader />}>
                 <Routes>
                     <Route path="/register" element={<Register />} />
+                    <Route path="/login" element={<Login />} />
                 </Routes>
             </Suspense>
         </Router>
